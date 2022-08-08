@@ -1,4 +1,4 @@
-# Descrição do Projeto
+# Projeto Semantix - Big Data Engineering
 
 O projeto consiste em utilizar os dados fornecidos no site https://covid.saude.gov.br/ para fazer alguns processos aprendidos ao longo do curso: Utilizar o docker e docker compose para criar e controlar o cluster de sistemas, utilizar o HDFS para gerenciamento dos dados no cluster, utilizar o HIVE com SQL para gerar um banco de dados, ler esses dados através do Spark, gerando tabelas com diferentes visualizações, e salvar as mesmas em diversos formatos, como tabela dentro do HIVE, um conjunto de arquivos em formato parquet, em um tópico do Kafka e do Elastic, e gerar Dashboards atrav
 
@@ -143,10 +143,10 @@ interior_metropolitana,
 codmun FROM tempCovid WHERE regiao<>"regiao";
 ```
 
-#Spark - Scala
+# Spark - Scala
 O programa em Scala foi desenvolvido de acordo com o padrão Semantix disponibilizado no curso. Dentro do programa, cada arquivo está comentado de acordo com sua função e detalhes. Sua função principal é ler os dados da tabela do Hive, tratar, transformar e adequar os dados dessa tabela para exibição e para salvar de acordo com a solicitação dos exercícios do projeto. 
 
-#Automação dos processos
+# Automação dos processos
 Com os testes constantes e repetição de diversos passos do projeto, alguns scripts foram criados para automatizar esses testes. O hivesql.sql automatiza os processos explicados acima, sendo rodado dentro do container hive-server com o seguinte comando:
 
 `hive -f /home/hivesql.sql`
